@@ -98,5 +98,55 @@ export default [
         mascote: "Nenhum",
         patrono: "Não Conhecido",
         especialidade: "Pegadinhas"
+    },
+    {
+        id: 11,
+        nome: "Pansy Parkinson",
+        casa: "Sonserina",
+        ano: 7,
+        varinha: "Desconhecida",
+        mascote: "Nenhum",
+        patrono: "Não Conhecido",
+        especialidade: "Ser figurante"
+    },
+    {
+        id: 12,
+        nome: "Sirius Black",
+        casa: "Grifinória",
+        ano: "Formado",
+        varinha: "Desconhecida",
+        mascote: "Nenhum",
+        patrono: "Cão",
+        especialidade: "Animago"
+    },
+    {
+        id: 13,
+        nome: "Severo Snape",
+        casa: "Sonserina",
+        ano: "Formado",
+        varinha: "Ébano e fibra de coração de dragão, 31cm",
+        mascote: "Nenhum",
+        patrono: "Corça",
+        especialidade: "Poções"
+    },
+    {
+        id: 14,
+        nome: "Minerva McGonagall",
+        casa: "Grifinória",
+        ano: "Formado",
+        varinha: "Pinheiro e corda de coração de dragão, 30cm",
+        mascote: "Gato",
+        patrono: "Gato",
+        especialidade: "Transfiguração"
+    },
+    {
+        id: 15,
+        nome: "Remus Lupin",
+        casa: "Grifinória",
+        ano: "Formado",
+        varinha: "Cipreste e corda de coração de dragão, 26cm",
+        mascote: "Nenhum",
+        patrono: "Lobo",
+        especialidade: "Defesa contra a arte das trevas"
     }
 ];
