@@ -113,7 +113,10 @@ app.get("/casas", (req, res) => {
   res.status(200).json(casas);
  });
  
-
+//Varinhas
+app.get("/varinhas" , (req, res) => {
+    res.status(200).json(varinhas)
+    });
 
 //Poções
 app.get("/pocoes" , (req, res) => {
