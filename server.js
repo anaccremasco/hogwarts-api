@@ -112,21 +112,79 @@ app.get("/bruxos/vivos/nao", (req, res) => {
 app.get("/casas", (req, res) => {
   res.status(200).json(casas);
  });
+
+ app.get("/casas/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+
+  const casaEncontrada = casas.find(c => c.id === id);
+
+  if (casaEncontrada) {
+    res.status(200).json(casaEncontrada);
+  } else {
+    res.status(404).json({
+      message: "Casa não encontrada"
+});
+  }
+});
  
 //Varinhas
 app.get("/varinhas" , (req, res) => {
     res.status(200).json(varinhas)
     });
 
+ app.get("/varinhas/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+
+  const varinhaEncontrada = varinhas.find(v => v.id === id);
+
+  if (varinhaEncontrada) {
+    res.status(200).json(varinhaEncontrada);
+  } else {
+    res.status(404).json({
+      message: "Varinha não encontrada"
+    })
+  }
+});
+
 //Poções
 app.get("/pocoes" , (req, res) => {
     res.status(200).json(pocoes)
     });
 
+app.get("/pocoes/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+
+  const pocoesEncontrada = pocoes.find(p => p.id === id);
+
+  if (pocoesEncontrada) {
+    res.status(200).json(pocoesEncontrada);
+  } else {
+    res.status(404).json({
+      message: "Poções não encontrada"
+    })
+  }
+});
+
+
 //Animais
 app.get("/animais" , (req, res) => {
     res.status(200).json(animais)
     });
+
+ app.get("/animais/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+
+  const animalEncontrado = animais.find(v => v.id === id);
+
+  if (animalEncontrado) {
+    res.status(200).json(animalEncontrado);
+  } else {
+    res.status(404).json({
+      message: "Animal não encontrado"
+    })
+  }
+});
+
 
 // Iniciar servidor
 app.listen(serverPort, () => {
