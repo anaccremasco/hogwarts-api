@@ -7,9 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js"
   },
-  "keywords": [
-    "Hogwarts"
-  ],
+  "keywords": ["Hogwarts"],
   "author": "Ana",
   "license": "MIT",
   "description": "Atividade prática",

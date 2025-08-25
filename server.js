@@ -1,6 +1,7 @@
 import express from "express";
-import bruxos from "./src/data/bruxos.js"
+import dados from "./src/data/dados.js";
 
+const {bruxos, casas, varinhas, animais, pocoes} = dados;
 const serverPort = 3000;
 const app = express();
 
@@ -38,18 +39,6 @@ app.get('/', (req, res) => {
       </div>
     </div>
   `);
-});
-
-// Rota das casas
-app.get('/casas', (req, res) => {
-  res.json({
-    casas: [
-      { nome: "Grifinória", animal: "🦁", fundador: "Godrico Gryffindor" },
-      { nome: "Sonserina", animal: "🐍", fundador: "Salazar Slytherin" },
-      { nome: "Corvinal", animal: "🦅", fundador: "Rowena Ravenclaw" },
-      { nome: "Lufa-lufa", animal: "🦡", fundador: "Helga Hufflepuff" }
-    ]
-  });
 });
 
 app.get("/bruxos", (req, res) => {
@@ -118,6 +107,23 @@ app.get("/bruxos/vivos/nao", (req, res) => {
     res.status(404).json("erro: status do personagem não foi encontrado")
   }
 })
+
+//Casas
+app.get("/casas", (req, res) => {
+  res.status(200).json(casas);
+ });
+ 
+
+
+//Poções
+app.get("/pocoes" , (req, res) => {
+    res.status(200).json(pocoes)
+    });
+
+//Animais
+app.get("/animais" , (req, res) => {
+    res.status(200).json(animais)
+    });
 
 // Iniciar servidor
 app.listen(serverPort, () => {
